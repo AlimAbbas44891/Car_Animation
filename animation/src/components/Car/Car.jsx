@@ -12,8 +12,8 @@ const Car = () => {
     const canvas = document.getElementById("carSection");
     const context = canvas.getContext("2d");
 
-    canvas.width = 1500;
-    canvas.height = 600;
+    canvas.width = 900;
+    canvas.height = 520;
 
     const totalFrame = 80;
 
@@ -31,6 +31,8 @@ const Car = () => {
 
     for (let i = 0; i < totalFrame; i++) {
       const img = new Image();
+      context.canvas.width = window.innerWidth;
+      context.canvas.height = window.innerHeight;
       img.src = currentFrame(i);
       img.setAttribute("className", "imgWidth");
       images.push(img);
